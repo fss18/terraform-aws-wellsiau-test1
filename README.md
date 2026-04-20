@@ -1,8 +1,9 @@
-# terraform-aws-MODULE_NAME
+<!-- BEGIN_TF_DOCS -->
+# terraform-aws-MODULE\_NAME
 
 <!-- Update the title and description above with your module name and a brief overview -->
 
-This module deploys ... _(replace with your module description)_.
+This module deploys ... \_(replace with your module description)\_.
 
 ## Architecture
 
@@ -146,7 +147,6 @@ Edit `.config/functional_tests/post-entrypoint-helpers.sh` to clean up after tes
 rm -f tests/terraform.auto.tfvars
 ```
 
-<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
