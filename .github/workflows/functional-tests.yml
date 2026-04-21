@@ -7,8 +7,14 @@ permissions:
   contents: read
   id-token: write
 jobs:
-  functional-tests:
+  approve:
+    runs-on: ubuntu-latest
     environment: functional-test
+    steps:
+      - name: Approved
+        run: echo "Functional tests approved by reviewer"
+  functional-tests:
+    needs: approve
     uses: wellsiau-abp-v2/central-repo/.github/workflows/tf-module-functional-tests.yml@v1
     with:
       terraform-version: "1.14.8"  # Update to match your module's required_version
