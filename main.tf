@@ -1,12 +1,8 @@
-# Add your module resources here.
-# See examples/basic/ for a usage example.
-# Test change
-# Test again
-# Test 2
-# Test 3
-# Test 4
-# Test 5
-# Test 6
-# Test 7
-# Test 8
-invalid_block {}
+resource "aws_s3_bucket" "example" {
+  bucket = "my-bucket"
+
+  # Reference a resource that doesn't exist — triggers validate error
+  tags = {
+    Name = aws_instance.nonexistent.id
+  }
+}
